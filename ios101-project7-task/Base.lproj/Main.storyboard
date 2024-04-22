@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" separatorInsetReference="fromAutomaticInsets" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Q4w-ie-GaD">
-                                <rect key="frame" x="0.0" y="91" width="390" height="753"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" separatorInsetReference="fromAutomaticInsets" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Q4w-ie-GaD">
+                                <rect key="frame" x="0.0" y="91" width="390" height="445"/>
                                 <inset key="separatorInset" minX="48" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" rowHeight="66" id="WLA-WM-GNM" customClass="TaskCell" customModule="ios101_project7_task" customModuleProvider="target">
@@ -89,6 +89,13 @@
                                 <color key="textColor" systemColor="tertiaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfH-g0-EMe">
+                                <rect key="frame" x="123" y="664" width="144" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -112,6 +119,7 @@
                     <connections>
                         <outlet property="emptyStateLabel" destination="9An-t6-Ghh" id="XQY-EN-OAD"/>
                         <outlet property="tableView" destination="Q4w-ie-GaD" id="8LE-X0-4bX"/>
+                        <outlet property="totalMoneyLabel" destination="dfH-g0-EMe" id="W5Y-Qw-cNa"/>
                         <segue destination="Wks-lt-YIn" kind="presentation" identifier="ComposeSegue" id="0Ka-5Z-F99"/>
                     </connections>
                 </viewController>
@@ -178,6 +186,12 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Money Needed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Emu-BO-kqX">
+                                <rect key="frame" x="16" y="262" width="126" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lzg-S3-CuB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -202,6 +216,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="606-7B-xyd" id="1zb-yn-AF5"/>
+                        <outlet property="moneyField" destination="Emu-BO-kqX" id="WWr-VN-Jn5"/>
                         <outlet property="noteField" destination="fXp-ww-cKc" id="PSd-Yy-FrT"/>
                         <outlet property="titleField" destination="lYk-Ia-Eqa" id="N3B-CA-1Dv"/>
                     </connections>
@@ -366,6 +381,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pAx-bv-4Yp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KWb-mr-eRm">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

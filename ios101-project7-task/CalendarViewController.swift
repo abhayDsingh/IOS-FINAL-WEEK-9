@@ -207,6 +207,7 @@ extension CalendarViewController: UICalendarViewDelegate {
             // ii.
             return .image(image, color: .systemBlue, size: .large)
         } else {
+           
             // iii.
             return nil
         }

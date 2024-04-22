@@ -11,6 +11,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        func styleGlobalComponents() {
+            // Set the global appearance of table views
+            UITableView.appearance().backgroundColor = UIColor.systemGroupedBackground
+            UITableViewCell.appearance().backgroundColor = UIColor.lightGray
+            UILabel.appearance(whenContainedInInstancesOf: [UITableViewCell.self]).textColor = UIColor.darkGray
+        }
+
+        
         return true
     }
 
